@@ -6,12 +6,7 @@ using System.Web;
 /// <summary>
 /// Descripción breve de Recepcion
 /// </summary>
-public class Recepcion : BD_MESA_VIRTUALEntities
+public class Recepcion
 {
-    public Recepcion()
-    {
-        
-
-
-    }
+    
 }

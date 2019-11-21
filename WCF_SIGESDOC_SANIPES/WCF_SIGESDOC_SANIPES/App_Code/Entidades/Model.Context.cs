@@ -7,28 +7,29 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System;
-using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
-
-public partial class BD_MESA_VIRTUALEntities : DbContext
+namespace Entidades
 {
-    public BD_MESA_VIRTUALEntities()
-        : base("name=BD_MESA_VIRTUALEntities")
+    using System;
+    using System.Data.Entity;
+    using System.Data.Entity.Infrastructure;
+    
+    public partial class BD_MESA_VIRTUALEntities : DbContext
     {
-
-
+        public BD_MESA_VIRTUALEntities()
+            : base("name=BD_MESA_VIRTUALEntities")
+        {
+        }
+    
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            throw new UnintentionalCodeFirstException();
+        }
+    
+        public virtual DbSet<IOTDTC_DESPACHO> IOTDTC_DESPACHO { get; set; }
+        public virtual DbSet<IOTDTC_RECEPCION> IOTDTC_RECEPCION { get; set; }
+        public virtual DbSet<IOTDTD_ANEXO> IOTDTD_ANEXO { get; set; }
+        public virtual DbSet<IOTDTD_DOC_PRINCIPAL> IOTDTD_DOC_PRINCIPAL { get; set; }
+        public virtual DbSet<IOTDTM_DOC_EXTERNO> IOTDTM_DOC_EXTERNO { get; set; }
+        public virtual DbSet<TIPO_DOCUMENTO> TIPO_DOCUMENTO { get; set; }
     }
-
-    protected override void OnModelCreating(DbModelBuilder modelBuilder)
-    {
-        throw new UnintentionalCodeFirstException();
-    }
-
-    public virtual DbSet<IOTDTC_DESPACHO> IOTDTC_DESPACHO { get; set; }
-    public virtual DbSet<IOTDTC_RECEPCION> IOTDTC_RECEPCION { get; set; }
-    public virtual DbSet<IOTDTD_ANEXO> IOTDTD_ANEXO { get; set; }
-    public virtual DbSet<IOTDTD_DOC_PRINCIPAL> IOTDTD_DOC_PRINCIPAL { get; set; }
-    public virtual DbSet<IOTDTM_DOC_EXTERNO> IOTDTM_DOC_EXTERNO { get; set; }
-    public virtual DbSet<TIPO_DOCUMENTO> TIPO_DOCUMENTO { get; set; }
 }

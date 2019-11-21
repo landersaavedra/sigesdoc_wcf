@@ -5,12 +5,12 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="a1af6bff96c748a194631bf57885fb3c" Name="Diagram1" ZoomLevel="95">
-        <EntityTypeShape EntityType="BD_MESA_VIRTUALModel.IOTDTC_DESPACHO" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="BD_MESA_VIRTUALModel.IOTDTC_RECEPCION" Width="1.5" PointX="0.75" PointY="8.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="BD_MESA_VIRTUALModel.IOTDTD_ANEXO" Width="1.5" PointX="5.25" PointY="1.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="BD_MESA_VIRTUALModel.IOTDTD_DOC_PRINCIPAL" Width="1.5" PointX="5.25" PointY="4.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="BD_MESA_VIRTUALModel.IOTDTM_DOC_EXTERNO" Width="1.5" PointX="3" PointY="1.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BD_MESA_VIRTUALModel.TIPO_DOCUMENTO" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_MESA_VIRTUALModel.IOTDTC_DESPACHO" Width="1.875" PointX="0.5" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_MESA_VIRTUALModel.IOTDTC_RECEPCION" Width="2" PointX="5.625" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_MESA_VIRTUALModel.IOTDTD_ANEXO" Width="2" PointX="5.375" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_MESA_VIRTUALModel.IOTDTD_DOC_PRINCIPAL" Width="1.875" PointX="9" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_MESA_VIRTUALModel.IOTDTM_DOC_EXTERNO" Width="2" PointX="2.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_MESA_VIRTUALModel.TIPO_DOCUMENTO" Width="1.5" PointX="8.125" PointY="0.75" IsExpanded="true" />
         <AssociationConnector Association="BD_MESA_VIRTUALModel.DESPACHO_FK_DOC_EXTERNO" ManuallyRouted="false" />
         <AssociationConnector Association="BD_MESA_VIRTUALModel.RECEPCION_FK_DOC_EXTERNO" ManuallyRouted="false" />
         <AssociationConnector Association="BD_MESA_VIRTUALModel.TDTM_DOC_EXTERNO_TDTD_ANEXO_FK" ManuallyRouted="false" />
