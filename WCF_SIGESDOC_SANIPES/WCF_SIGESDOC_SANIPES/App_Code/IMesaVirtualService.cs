@@ -12,32 +12,14 @@ public interface IMesaVirtualService
 {
 
 	[OperationContract]
-	string GetData(int value);
+    IEnumerable<RecepcionResponse> GuardaRecepcion(int idrecepcion);
 
-	[OperationContract]
-	CompositeType GetDataUsingDataContract(CompositeType composite);
+    [OperationContract]
+    RecepcionResponse Recupera_Recepcion(int idrecepcion);
+    
+    [OperationContract]
+    IEnumerable<RecepcionResponse> GetRecepcions();
 
-	// TODO: agregue aquí sus operaciones de servicio
 }
 
-// Utilice un contrato de datos, como se ilustra en el ejemplo siguiente, para agregar tipos compuestos a las operaciones de servicio.
-[DataContract]
-public class CompositeType
-{
-	bool boolValue = true;
-	string stringValue = "Hello ";
 
-	[DataMember]
-	public bool BoolValue
-	{
-		get { return boolValue; }
-		set { boolValue = value; }
-	}
-
-	[DataMember]
-	public string StringValue
-	{
-		get { return stringValue; }
-		set { stringValue = value; }
-	}
-}
