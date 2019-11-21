@@ -1,0 +1,6 @@
+C:\Users\PSSPERU069\Documents\Proyecto\sigesdoc_wcf\WCF_SIGESDOC_SANIPES\WCF_Core\bin\Debug\WCF_Core.dll
+C:\Users\PSSPERU069\Documents\Proyecto\sigesdoc_wcf\WCF_SIGESDOC_SANIPES\WCF_Core\bin\Debug\WCF_Core.pdb
+C:\Users\PSSPERU069\Documents\Proyecto\sigesdoc_wcf\WCF_SIGESDOC_SANIPES\WCF_Core\obj\Debug\WCF_Core.csprojAssemblyReference.cache
+C:\Users\PSSPERU069\Documents\Proyecto\sigesdoc_wcf\WCF_SIGESDOC_SANIPES\WCF_Core\obj\Debug\WCF_Core.csproj.CoreCompileInputs.cache
+C:\Users\PSSPERU069\Documents\Proyecto\sigesdoc_wcf\WCF_SIGESDOC_SANIPES\WCF_Core\obj\Debug\WCF_Core.dll
+C:\Users\PSSPERU069\Documents\Proyecto\sigesdoc_wcf\WCF_SIGESDOC_SANIPES\WCF_Core\obj\Debug\WCF_Core.pdb

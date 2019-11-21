@@ -6,6 +6,7 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WCF_SIGESDOC_SANIPES", "WCF_SIGESDOC_SANIPES\", "{92FBCC71-74A0-49E1-9FEC-7C1539A39B7D}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7.1"
+		ProjectReferences = ""
 		Debug.AspNetCompiler.VirtualPath = "/localhost_58484"
 		Debug.AspNetCompiler.PhysicalPath = "WCF_SIGESDOC_SANIPES\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_58484\"
@@ -28,10 +29,13 @@ EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{92FBCC71-74A0-49E1-9FEC-7C1539A39B7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{92FBCC71-74A0-49E1-9FEC-7C1539A39B7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92FBCC71-74A0-49E1-9FEC-7C1539A39B7D}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{92FBCC71-74A0-49E1-9FEC-7C1539A39B7D}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
