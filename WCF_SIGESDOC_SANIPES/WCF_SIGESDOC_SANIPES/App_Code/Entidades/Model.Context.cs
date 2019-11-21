@@ -16,6 +16,8 @@ public partial class BD_MESA_VIRTUALEntities : DbContext
     public BD_MESA_VIRTUALEntities()
         : base("name=BD_MESA_VIRTUALEntities")
     {
+
+
     }
 
     protected override void OnModelCreating(DbModelBuilder modelBuilder)

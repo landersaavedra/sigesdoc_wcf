@@ -6,12 +6,12 @@ using System.Web;
 /// <summary>
 /// Descripción breve de Recepcion
 /// </summary>
-public class Recepcion
+public class Recepcion : BD_MESA_VIRTUALEntities
 {
     public Recepcion()
     {
-        //
-        // TODO: Agregar aquí la lógica del constructor
-        //
+        
+
+
     }
 }
