@@ -8,5 +8,8 @@ using System.Web;
 /// </summary>
 public partial interface IRecepcionRepositorio
 {
-    IEnumerable<>
+    IEnumerable<RecepcionResponse> GuardaRecepcion(int idrecepcion);
+    RecepcionResponse Recupera_Recepcion(int idrecepcion);
+    IEnumerable<RecepcionResponse> GetRecepcions();
+   
 }
