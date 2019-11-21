@@ -11,18 +11,11 @@ public interface IBaseRepositorio<T>
 {
 
     IQueryable<T> Listar(Expression<Func<T, bool>> filter = null, int pageIndex = 1, int pageSize = int.MinValue);
-
     int Contar(Expression<Func<T, bool>> filter = null );
-    
     T ListaUno(Expression<Func<T, bool>> predicate);
-
     void Insertar(T entity);
-
     void Actualizar(T entity);
-
     void ActualizarParcial(T entity, params string[] noChangedPropertyNames);
-
     void Eliminar(T entity);
-
 
 }
