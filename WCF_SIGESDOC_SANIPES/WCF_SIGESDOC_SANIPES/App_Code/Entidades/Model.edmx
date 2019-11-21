@@ -1,0 +1,515 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="BD_MESA_VIRTUALModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="IOTDTC_DESPACHO">
+          <Key>
+            <PropertyRef Name="SIDEMIEXT" />
+          </Key>
+          <Property Name="SIDEMIEXT" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="VNUMREGSTD" Type="varchar" MaxLength="10" />
+          <Property Name="VANIOREGSTD" Type="varchar" MaxLength="4" />
+          <Property Name="CTIPDOCIDEREM" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="VNUMDOCIDEREM" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="VCODUNIORGREM" Type="varchar" MaxLength="15" />
+          <Property Name="VUNIORGREM" Type="varchar" MaxLength="250" />
+          <Property Name="VCUO" Type="varchar" MaxLength="10" />
+          <Property Name="VRUCENTREC" Type="varchar" MaxLength="11" Nullable="false" />
+          <Property Name="VNOMENTREC" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="VNUMREGSTDREC" Type="varchar" MaxLength="14" />
+          <Property Name="VANIOREGSTDREC" Type="varchar" MaxLength="4" />
+          <Property Name="VUNIORGSTDREC" Type="varchar" MaxLength="250" />
+          <Property Name="VDESANXSTDREC" Type="varchar" MaxLength="750" />
+          <Property Name="DFECREGSTDREC" Type="datetime" />
+          <Property Name="VUSUREGSTDREC" Type="varchar" MaxLength="150" />
+          <Property Name="BCARSTDREC" Type="varbinary(max)" />
+          <Property Name="VOBS" Type="varchar" MaxLength="250" />
+          <Property Name="VCUOREF" Type="varchar" MaxLength="10" />
+          <Property Name="CFLGEST" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="DFECENV" Type="datetime" />
+          <Property Name="VUSUREG" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="DFECREG" Type="datetime" Nullable="false" />
+          <Property Name="VUSUMOD" Type="varchar" MaxLength="15" />
+          <Property Name="DFECMOD" Type="datetime" />
+        </EntityType>
+        <EntityType Name="IOTDTC_RECEPCION">
+          <Key>
+            <PropertyRef Name="SIDRECEXT" />
+          </Key>
+          <Property Name="SIDRECEXT" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="VRUCENTREM" Type="varchar" MaxLength="11" Nullable="false" />
+          <Property Name="VUNIORGREM" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="CTIPDOCIDEREM" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="VNUMDOCIDEREM" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="VNUMREGSTD" Type="varchar" MaxLength="10" />
+          <Property Name="VANIOREGSTD" Type="varchar" MaxLength="4" />
+          <Property Name="VUNIORGSTD" Type="varchar" MaxLength="250" />
+          <Property Name="CCODUNIORGSTD" Type="char" MaxLength="15" />
+          <Property Name="VDESANXSTD" Type="varchar" MaxLength="750" />
+          <Property Name="DFECREGSTD" Type="datetime" />
+          <Property Name="VUSUREGSTD" Type="varchar" MaxLength="100" />
+          <Property Name="BCARSTD" Type="varbinary(max)" />
+          <Property Name="VCUO" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="VCUOREF" Type="varchar" MaxLength="10" />
+          <Property Name="VOBS" Type="varchar" MaxLength="250" />
+          <Property Name="CFLGESTOBS" Type="char" MaxLength="1" />
+          <Property Name="CFLGEST" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="DFECREG" Type="datetime" Nullable="false" />
+          <Property Name="VUSUMOD" Type="varchar" MaxLength="15" />
+          <Property Name="DFECMOD" Type="datetime" />
+          <Property Name="CFLGENVCAR" Type="char" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="IOTDTD_ANEXO">
+          <Key>
+            <PropertyRef Name="SIDDOCANX" />
+          </Key>
+          <Property Name="SIDDOCANX" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="VNOMDOC" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="SIDDOCEXT" Type="smallint" Nullable="false" />
+          <Property Name="DFECREG" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="IOTDTD_DOC_PRINCIPAL">
+          <Key>
+            <PropertyRef Name="SIDDOCPRI" />
+          </Key>
+          <Property Name="SIDDOCPRI" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SIDDOCEXT" Type="smallint" Nullable="false" />
+          <Property Name="VNOMDOC" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="BPDFDOC" Type="varbinary(max)" Nullable="false" />
+          <Property Name="CCODEST" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="DFECREG" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="IOTDTM_DOC_EXTERNO">
+          <Key>
+            <PropertyRef Name="SIDDOCEXT" />
+          </Key>
+          <Property Name="SIDDOCEXT" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="VNOMENTEMI" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="CCODTIPDOC" Type="char" MaxLength="2" Nullable="false" />
+          <Property Name="VNUMDOC" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="DFECDOC" Type="datetime" Nullable="false" />
+          <Property Name="VUNIORGDST" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="VNOMDST" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="VNOMCARDST" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="VASU" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="CINDTUP" Type="char" MaxLength="1" />
+          <Property Name="SNUMANX" Type="smallint" />
+          <Property Name="SNUMFOL" Type="smallint" Nullable="false" />
+          <Property Name="VURLDOCANX" Type="varchar" MaxLength="200" />
+          <Property Name="SIDEMIEXT" Type="smallint" />
+          <Property Name="SIDRECEXT" Type="smallint" />
+        </EntityType>
+        <EntityType Name="TIPO_DOCUMENTO">
+          <Key>
+            <PropertyRef Name="CIDTIPDOC" />
+          </Key>
+          <Property Name="CIDTIPDOC" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="VDESTIPDOC" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="CCODTIPODOC" Type="varchar" MaxLength="2" Nullable="false" />
+        </EntityType>
+        <Association Name="DESPACHO_FK_DOC_EXTERNO">
+          <End Role="IOTDTC_DESPACHO" Type="Self.IOTDTC_DESPACHO" Multiplicity="0..1" />
+          <End Role="IOTDTM_DOC_EXTERNO" Type="Self.IOTDTM_DOC_EXTERNO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="IOTDTC_DESPACHO">
+              <PropertyRef Name="SIDEMIEXT" />
+            </Principal>
+            <Dependent Role="IOTDTM_DOC_EXTERNO">
+              <PropertyRef Name="SIDEMIEXT" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="IOTDTM_DOC_EXTERNO_IOTDTD_DOC_PRINCIPAL_fk">
+          <End Role="IOTDTM_DOC_EXTERNO" Type="Self.IOTDTM_DOC_EXTERNO" Multiplicity="1" />
+          <End Role="IOTDTD_DOC_PRINCIPAL" Type="Self.IOTDTD_DOC_PRINCIPAL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="IOTDTM_DOC_EXTERNO">
+              <PropertyRef Name="SIDDOCEXT" />
+            </Principal>
+            <Dependent Role="IOTDTD_DOC_PRINCIPAL">
+              <PropertyRef Name="SIDDOCEXT" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="RECEPCION_FK_DOC_EXTERNO">
+          <End Role="IOTDTC_RECEPCION" Type="Self.IOTDTC_RECEPCION" Multiplicity="0..1" />
+          <End Role="IOTDTM_DOC_EXTERNO" Type="Self.IOTDTM_DOC_EXTERNO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="IOTDTC_RECEPCION">
+              <PropertyRef Name="SIDRECEXT" />
+            </Principal>
+            <Dependent Role="IOTDTM_DOC_EXTERNO">
+              <PropertyRef Name="SIDRECEXT" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TDTM_DOC_EXTERNO_TDTD_ANEXO_FK">
+          <End Role="IOTDTM_DOC_EXTERNO" Type="Self.IOTDTM_DOC_EXTERNO" Multiplicity="1" />
+          <End Role="IOTDTD_ANEXO" Type="Self.IOTDTD_ANEXO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="IOTDTM_DOC_EXTERNO">
+              <PropertyRef Name="SIDDOCEXT" />
+            </Principal>
+            <Dependent Role="IOTDTD_ANEXO">
+              <PropertyRef Name="SIDDOCEXT" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="BD_MESA_VIRTUALModelStoreContainer">
+          <EntitySet Name="IOTDTC_DESPACHO" EntityType="Self.IOTDTC_DESPACHO" Schema="IDOSGD" store:Type="Tables" />
+          <EntitySet Name="IOTDTC_RECEPCION" EntityType="Self.IOTDTC_RECEPCION" Schema="IDOSGD" store:Type="Tables" />
+          <EntitySet Name="IOTDTD_ANEXO" EntityType="Self.IOTDTD_ANEXO" Schema="IDOSGD" store:Type="Tables" />
+          <EntitySet Name="IOTDTD_DOC_PRINCIPAL" EntityType="Self.IOTDTD_DOC_PRINCIPAL" Schema="IDOSGD" store:Type="Tables" />
+          <EntitySet Name="IOTDTM_DOC_EXTERNO" EntityType="Self.IOTDTM_DOC_EXTERNO" Schema="IDOSGD" store:Type="Tables" />
+          <EntitySet Name="TIPO_DOCUMENTO" EntityType="Self.TIPO_DOCUMENTO" Schema="IDOSGD" store:Type="Tables" />
+          <AssociationSet Name="DESPACHO_FK_DOC_EXTERNO" Association="Self.DESPACHO_FK_DOC_EXTERNO">
+            <End Role="IOTDTC_DESPACHO" EntitySet="IOTDTC_DESPACHO" />
+            <End Role="IOTDTM_DOC_EXTERNO" EntitySet="IOTDTM_DOC_EXTERNO" />
+          </AssociationSet>
+          <AssociationSet Name="IOTDTM_DOC_EXTERNO_IOTDTD_DOC_PRINCIPAL_fk" Association="Self.IOTDTM_DOC_EXTERNO_IOTDTD_DOC_PRINCIPAL_fk">
+            <End Role="IOTDTM_DOC_EXTERNO" EntitySet="IOTDTM_DOC_EXTERNO" />
+            <End Role="IOTDTD_DOC_PRINCIPAL" EntitySet="IOTDTD_DOC_PRINCIPAL" />
+          </AssociationSet>
+          <AssociationSet Name="RECEPCION_FK_DOC_EXTERNO" Association="Self.RECEPCION_FK_DOC_EXTERNO">
+            <End Role="IOTDTC_RECEPCION" EntitySet="IOTDTC_RECEPCION" />
+            <End Role="IOTDTM_DOC_EXTERNO" EntitySet="IOTDTM_DOC_EXTERNO" />
+          </AssociationSet>
+          <AssociationSet Name="TDTM_DOC_EXTERNO_TDTD_ANEXO_FK" Association="Self.TDTM_DOC_EXTERNO_TDTD_ANEXO_FK">
+            <End Role="IOTDTM_DOC_EXTERNO" EntitySet="IOTDTM_DOC_EXTERNO" />
+            <End Role="IOTDTD_ANEXO" EntitySet="IOTDTD_ANEXO" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BD_MESA_VIRTUALModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="IOTDTC_DESPACHO">
+          <Key>
+            <PropertyRef Name="SIDEMIEXT" />
+          </Key>
+          <Property Name="SIDEMIEXT" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="VNUMREGSTD" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="VANIOREGSTD" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="CTIPDOCIDEREM" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="VNUMDOCIDEREM" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="VCODUNIORGREM" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="VUNIORGREM" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="VCUO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="VRUCENTREC" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="VNOMENTREC" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="VNUMREGSTDREC" Type="String" MaxLength="14" FixedLength="false" Unicode="false" />
+          <Property Name="VANIOREGSTDREC" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="VUNIORGSTDREC" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="VDESANXSTDREC" Type="String" MaxLength="750" FixedLength="false" Unicode="false" />
+          <Property Name="DFECREGSTDREC" Type="DateTime" Precision="3" />
+          <Property Name="VUSUREGSTDREC" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="BCARSTDREC" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="VOBS" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="VCUOREF" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="CFLGEST" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="DFECENV" Type="DateTime" Precision="3" />
+          <Property Name="VUSUREG" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DFECREG" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="VUSUMOD" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="DFECMOD" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="IOTDTM_DOC_EXTERNO" Relationship="Self.DESPACHO_FK_DOC_EXTERNO" FromRole="IOTDTC_DESPACHO" ToRole="IOTDTM_DOC_EXTERNO" />
+        </EntityType>
+        <EntityType Name="IOTDTC_RECEPCION">
+          <Key>
+            <PropertyRef Name="SIDRECEXT" />
+          </Key>
+          <Property Name="SIDRECEXT" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="VRUCENTREM" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="VUNIORGREM" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CTIPDOCIDEREM" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="VNUMDOCIDEREM" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="VNUMREGSTD" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="VANIOREGSTD" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="VUNIORGSTD" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="CCODUNIORGSTD" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+          <Property Name="VDESANXSTD" Type="String" MaxLength="750" FixedLength="false" Unicode="false" />
+          <Property Name="DFECREGSTD" Type="DateTime" Precision="3" />
+          <Property Name="VUSUREGSTD" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="BCARSTD" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="VCUO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="VCUOREF" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="VOBS" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="CFLGESTOBS" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="CFLGEST" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="DFECREG" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="VUSUMOD" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="DFECMOD" Type="DateTime" Precision="3" />
+          <Property Name="CFLGENVCAR" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="IOTDTM_DOC_EXTERNO" Relationship="Self.RECEPCION_FK_DOC_EXTERNO" FromRole="IOTDTC_RECEPCION" ToRole="IOTDTM_DOC_EXTERNO" />
+        </EntityType>
+        <EntityType Name="IOTDTD_ANEXO">
+          <Key>
+            <PropertyRef Name="SIDDOCANX" />
+          </Key>
+          <Property Name="SIDDOCANX" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="VNOMDOC" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SIDDOCEXT" Type="Int16" Nullable="false" />
+          <Property Name="DFECREG" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="IOTDTM_DOC_EXTERNO" Relationship="Self.TDTM_DOC_EXTERNO_TDTD_ANEXO_FK" FromRole="IOTDTD_ANEXO" ToRole="IOTDTM_DOC_EXTERNO" />
+        </EntityType>
+        <EntityType Name="IOTDTD_DOC_PRINCIPAL">
+          <Key>
+            <PropertyRef Name="SIDDOCPRI" />
+          </Key>
+          <Property Name="SIDDOCPRI" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SIDDOCEXT" Type="Int16" Nullable="false" />
+          <Property Name="VNOMDOC" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BPDFDOC" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+          <Property Name="CCODEST" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="DFECREG" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="IOTDTM_DOC_EXTERNO" Relationship="Self.IOTDTM_DOC_EXTERNO_IOTDTD_DOC_PRINCIPAL_fk" FromRole="IOTDTD_DOC_PRINCIPAL" ToRole="IOTDTM_DOC_EXTERNO" />
+        </EntityType>
+        <EntityType Name="IOTDTM_DOC_EXTERNO">
+          <Key>
+            <PropertyRef Name="SIDDOCEXT" />
+          </Key>
+          <Property Name="SIDDOCEXT" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="VNOMENTEMI" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CCODTIPDOC" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="VNUMDOC" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DFECDOC" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="VUNIORGDST" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="VNOMDST" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="VNOMCARDST" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="VASU" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CINDTUP" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="SNUMANX" Type="Int16" />
+          <Property Name="SNUMFOL" Type="Int16" Nullable="false" />
+          <Property Name="VURLDOCANX" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="SIDEMIEXT" Type="Int16" />
+          <Property Name="SIDRECEXT" Type="Int16" />
+          <NavigationProperty Name="IOTDTC_DESPACHO" Relationship="Self.DESPACHO_FK_DOC_EXTERNO" FromRole="IOTDTM_DOC_EXTERNO" ToRole="IOTDTC_DESPACHO" />
+          <NavigationProperty Name="IOTDTC_RECEPCION" Relationship="Self.RECEPCION_FK_DOC_EXTERNO" FromRole="IOTDTM_DOC_EXTERNO" ToRole="IOTDTC_RECEPCION" />
+          <NavigationProperty Name="IOTDTD_ANEXO" Relationship="Self.TDTM_DOC_EXTERNO_TDTD_ANEXO_FK" FromRole="IOTDTM_DOC_EXTERNO" ToRole="IOTDTD_ANEXO" />
+          <NavigationProperty Name="IOTDTD_DOC_PRINCIPAL" Relationship="Self.IOTDTM_DOC_EXTERNO_IOTDTD_DOC_PRINCIPAL_fk" FromRole="IOTDTM_DOC_EXTERNO" ToRole="IOTDTD_DOC_PRINCIPAL" />
+        </EntityType>
+        <EntityType Name="TIPO_DOCUMENTO">
+          <Key>
+            <PropertyRef Name="CIDTIPDOC" />
+          </Key>
+          <Property Name="CIDTIPDOC" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="VDESTIPDOC" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CCODTIPODOC" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <Association Name="DESPACHO_FK_DOC_EXTERNO">
+          <End Role="IOTDTC_DESPACHO" Type="Self.IOTDTC_DESPACHO" Multiplicity="0..1" />
+          <End Role="IOTDTM_DOC_EXTERNO" Type="Self.IOTDTM_DOC_EXTERNO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="IOTDTC_DESPACHO">
+              <PropertyRef Name="SIDEMIEXT" />
+            </Principal>
+            <Dependent Role="IOTDTM_DOC_EXTERNO">
+              <PropertyRef Name="SIDEMIEXT" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="RECEPCION_FK_DOC_EXTERNO">
+          <End Role="IOTDTC_RECEPCION" Type="Self.IOTDTC_RECEPCION" Multiplicity="0..1" />
+          <End Role="IOTDTM_DOC_EXTERNO" Type="Self.IOTDTM_DOC_EXTERNO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="IOTDTC_RECEPCION">
+              <PropertyRef Name="SIDRECEXT" />
+            </Principal>
+            <Dependent Role="IOTDTM_DOC_EXTERNO">
+              <PropertyRef Name="SIDRECEXT" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TDTM_DOC_EXTERNO_TDTD_ANEXO_FK">
+          <End Role="IOTDTM_DOC_EXTERNO" Type="Self.IOTDTM_DOC_EXTERNO" Multiplicity="1" />
+          <End Role="IOTDTD_ANEXO" Type="Self.IOTDTD_ANEXO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="IOTDTM_DOC_EXTERNO">
+              <PropertyRef Name="SIDDOCEXT" />
+            </Principal>
+            <Dependent Role="IOTDTD_ANEXO">
+              <PropertyRef Name="SIDDOCEXT" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="IOTDTM_DOC_EXTERNO_IOTDTD_DOC_PRINCIPAL_fk">
+          <End Role="IOTDTM_DOC_EXTERNO" Type="Self.IOTDTM_DOC_EXTERNO" Multiplicity="1" />
+          <End Role="IOTDTD_DOC_PRINCIPAL" Type="Self.IOTDTD_DOC_PRINCIPAL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="IOTDTM_DOC_EXTERNO">
+              <PropertyRef Name="SIDDOCEXT" />
+            </Principal>
+            <Dependent Role="IOTDTD_DOC_PRINCIPAL">
+              <PropertyRef Name="SIDDOCEXT" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="BD_MESA_VIRTUALEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="IOTDTC_DESPACHO" EntityType="Self.IOTDTC_DESPACHO" />
+          <EntitySet Name="IOTDTC_RECEPCION" EntityType="Self.IOTDTC_RECEPCION" />
+          <EntitySet Name="IOTDTD_ANEXO" EntityType="Self.IOTDTD_ANEXO" />
+          <EntitySet Name="IOTDTD_DOC_PRINCIPAL" EntityType="Self.IOTDTD_DOC_PRINCIPAL" />
+          <EntitySet Name="IOTDTM_DOC_EXTERNO" EntityType="Self.IOTDTM_DOC_EXTERNO" />
+          <EntitySet Name="TIPO_DOCUMENTO" EntityType="Self.TIPO_DOCUMENTO" />
+          <AssociationSet Name="DESPACHO_FK_DOC_EXTERNO" Association="Self.DESPACHO_FK_DOC_EXTERNO">
+            <End Role="IOTDTC_DESPACHO" EntitySet="IOTDTC_DESPACHO" />
+            <End Role="IOTDTM_DOC_EXTERNO" EntitySet="IOTDTM_DOC_EXTERNO" />
+          </AssociationSet>
+          <AssociationSet Name="RECEPCION_FK_DOC_EXTERNO" Association="Self.RECEPCION_FK_DOC_EXTERNO">
+            <End Role="IOTDTC_RECEPCION" EntitySet="IOTDTC_RECEPCION" />
+            <End Role="IOTDTM_DOC_EXTERNO" EntitySet="IOTDTM_DOC_EXTERNO" />
+          </AssociationSet>
+          <AssociationSet Name="TDTM_DOC_EXTERNO_TDTD_ANEXO_FK" Association="Self.TDTM_DOC_EXTERNO_TDTD_ANEXO_FK">
+            <End Role="IOTDTM_DOC_EXTERNO" EntitySet="IOTDTM_DOC_EXTERNO" />
+            <End Role="IOTDTD_ANEXO" EntitySet="IOTDTD_ANEXO" />
+          </AssociationSet>
+          <AssociationSet Name="IOTDTM_DOC_EXTERNO_IOTDTD_DOC_PRINCIPAL_fk" Association="Self.IOTDTM_DOC_EXTERNO_IOTDTD_DOC_PRINCIPAL_fk">
+            <End Role="IOTDTM_DOC_EXTERNO" EntitySet="IOTDTM_DOC_EXTERNO" />
+            <End Role="IOTDTD_DOC_PRINCIPAL" EntitySet="IOTDTD_DOC_PRINCIPAL" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BD_MESA_VIRTUALModelStoreContainer" CdmEntityContainer="BD_MESA_VIRTUALEntities">
+          <EntitySetMapping Name="IOTDTC_DESPACHO">
+            <EntityTypeMapping TypeName="BD_MESA_VIRTUALModel.IOTDTC_DESPACHO">
+              <MappingFragment StoreEntitySet="IOTDTC_DESPACHO">
+                <ScalarProperty Name="SIDEMIEXT" ColumnName="SIDEMIEXT" />
+                <ScalarProperty Name="VNUMREGSTD" ColumnName="VNUMREGSTD" />
+                <ScalarProperty Name="VANIOREGSTD" ColumnName="VANIOREGSTD" />
+                <ScalarProperty Name="CTIPDOCIDEREM" ColumnName="CTIPDOCIDEREM" />
+                <ScalarProperty Name="VNUMDOCIDEREM" ColumnName="VNUMDOCIDEREM" />
+                <ScalarProperty Name="VCODUNIORGREM" ColumnName="VCODUNIORGREM" />
+                <ScalarProperty Name="VUNIORGREM" ColumnName="VUNIORGREM" />
+                <ScalarProperty Name="VCUO" ColumnName="VCUO" />
+                <ScalarProperty Name="VRUCENTREC" ColumnName="VRUCENTREC" />
+                <ScalarProperty Name="VNOMENTREC" ColumnName="VNOMENTREC" />
+                <ScalarProperty Name="VNUMREGSTDREC" ColumnName="VNUMREGSTDREC" />
+                <ScalarProperty Name="VANIOREGSTDREC" ColumnName="VANIOREGSTDREC" />
+                <ScalarProperty Name="VUNIORGSTDREC" ColumnName="VUNIORGSTDREC" />
+                <ScalarProperty Name="VDESANXSTDREC" ColumnName="VDESANXSTDREC" />
+                <ScalarProperty Name="DFECREGSTDREC" ColumnName="DFECREGSTDREC" />
+                <ScalarProperty Name="VUSUREGSTDREC" ColumnName="VUSUREGSTDREC" />
+                <ScalarProperty Name="BCARSTDREC" ColumnName="BCARSTDREC" />
+                <ScalarProperty Name="VOBS" ColumnName="VOBS" />
+                <ScalarProperty Name="VCUOREF" ColumnName="VCUOREF" />
+                <ScalarProperty Name="CFLGEST" ColumnName="CFLGEST" />
+                <ScalarProperty Name="DFECENV" ColumnName="DFECENV" />
+                <ScalarProperty Name="VUSUREG" ColumnName="VUSUREG" />
+                <ScalarProperty Name="DFECREG" ColumnName="DFECREG" />
+                <ScalarProperty Name="VUSUMOD" ColumnName="VUSUMOD" />
+                <ScalarProperty Name="DFECMOD" ColumnName="DFECMOD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IOTDTC_RECEPCION">
+            <EntityTypeMapping TypeName="BD_MESA_VIRTUALModel.IOTDTC_RECEPCION">
+              <MappingFragment StoreEntitySet="IOTDTC_RECEPCION">
+                <ScalarProperty Name="SIDRECEXT" ColumnName="SIDRECEXT" />
+                <ScalarProperty Name="VRUCENTREM" ColumnName="VRUCENTREM" />
+                <ScalarProperty Name="VUNIORGREM" ColumnName="VUNIORGREM" />
+                <ScalarProperty Name="CTIPDOCIDEREM" ColumnName="CTIPDOCIDEREM" />
+                <ScalarProperty Name="VNUMDOCIDEREM" ColumnName="VNUMDOCIDEREM" />
+                <ScalarProperty Name="VNUMREGSTD" ColumnName="VNUMREGSTD" />
+                <ScalarProperty Name="VANIOREGSTD" ColumnName="VANIOREGSTD" />
+                <ScalarProperty Name="VUNIORGSTD" ColumnName="VUNIORGSTD" />
+                <ScalarProperty Name="CCODUNIORGSTD" ColumnName="CCODUNIORGSTD" />
+                <ScalarProperty Name="VDESANXSTD" ColumnName="VDESANXSTD" />
+                <ScalarProperty Name="DFECREGSTD" ColumnName="DFECREGSTD" />
+                <ScalarProperty Name="VUSUREGSTD" ColumnName="VUSUREGSTD" />
+                <ScalarProperty Name="BCARSTD" ColumnName="BCARSTD" />
+                <ScalarProperty Name="VCUO" ColumnName="VCUO" />
+                <ScalarProperty Name="VCUOREF" ColumnName="VCUOREF" />
+                <ScalarProperty Name="VOBS" ColumnName="VOBS" />
+                <ScalarProperty Name="CFLGESTOBS" ColumnName="CFLGESTOBS" />
+                <ScalarProperty Name="CFLGEST" ColumnName="CFLGEST" />
+                <ScalarProperty Name="DFECREG" ColumnName="DFECREG" />
+                <ScalarProperty Name="VUSUMOD" ColumnName="VUSUMOD" />
+                <ScalarProperty Name="DFECMOD" ColumnName="DFECMOD" />
+                <ScalarProperty Name="CFLGENVCAR" ColumnName="CFLGENVCAR" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IOTDTD_ANEXO">
+            <EntityTypeMapping TypeName="BD_MESA_VIRTUALModel.IOTDTD_ANEXO">
+              <MappingFragment StoreEntitySet="IOTDTD_ANEXO">
+                <ScalarProperty Name="SIDDOCANX" ColumnName="SIDDOCANX" />
+                <ScalarProperty Name="VNOMDOC" ColumnName="VNOMDOC" />
+                <ScalarProperty Name="SIDDOCEXT" ColumnName="SIDDOCEXT" />
+                <ScalarProperty Name="DFECREG" ColumnName="DFECREG" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IOTDTD_DOC_PRINCIPAL">
+            <EntityTypeMapping TypeName="BD_MESA_VIRTUALModel.IOTDTD_DOC_PRINCIPAL">
+              <MappingFragment StoreEntitySet="IOTDTD_DOC_PRINCIPAL">
+                <ScalarProperty Name="SIDDOCPRI" ColumnName="SIDDOCPRI" />
+                <ScalarProperty Name="SIDDOCEXT" ColumnName="SIDDOCEXT" />
+                <ScalarProperty Name="VNOMDOC" ColumnName="VNOMDOC" />
+                <ScalarProperty Name="BPDFDOC" ColumnName="BPDFDOC" />
+                <ScalarProperty Name="CCODEST" ColumnName="CCODEST" />
+                <ScalarProperty Name="DFECREG" ColumnName="DFECREG" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IOTDTM_DOC_EXTERNO">
+            <EntityTypeMapping TypeName="BD_MESA_VIRTUALModel.IOTDTM_DOC_EXTERNO">
+              <MappingFragment StoreEntitySet="IOTDTM_DOC_EXTERNO">
+                <ScalarProperty Name="SIDDOCEXT" ColumnName="SIDDOCEXT" />
+                <ScalarProperty Name="VNOMENTEMI" ColumnName="VNOMENTEMI" />
+                <ScalarProperty Name="CCODTIPDOC" ColumnName="CCODTIPDOC" />
+                <ScalarProperty Name="VNUMDOC" ColumnName="VNUMDOC" />
+                <ScalarProperty Name="DFECDOC" ColumnName="DFECDOC" />
+                <ScalarProperty Name="VUNIORGDST" ColumnName="VUNIORGDST" />
+                <ScalarProperty Name="VNOMDST" ColumnName="VNOMDST" />
+                <ScalarProperty Name="VNOMCARDST" ColumnName="VNOMCARDST" />
+                <ScalarProperty Name="VASU" ColumnName="VASU" />
+                <ScalarProperty Name="CINDTUP" ColumnName="CINDTUP" />
+                <ScalarProperty Name="SNUMANX" ColumnName="SNUMANX" />
+                <ScalarProperty Name="SNUMFOL" ColumnName="SNUMFOL" />
+                <ScalarProperty Name="VURLDOCANX" ColumnName="VURLDOCANX" />
+                <ScalarProperty Name="SIDEMIEXT" ColumnName="SIDEMIEXT" />
+                <ScalarProperty Name="SIDRECEXT" ColumnName="SIDRECEXT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TIPO_DOCUMENTO">
+            <EntityTypeMapping TypeName="BD_MESA_VIRTUALModel.TIPO_DOCUMENTO">
+              <MappingFragment StoreEntitySet="TIPO_DOCUMENTO">
+                <ScalarProperty Name="CIDTIPDOC" ColumnName="CIDTIPDOC" />
+                <ScalarProperty Name="VDESTIPDOC" ColumnName="VDESTIPDOC" />
+                <ScalarProperty Name="CCODTIPODOC" ColumnName="CCODTIPODOC" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
