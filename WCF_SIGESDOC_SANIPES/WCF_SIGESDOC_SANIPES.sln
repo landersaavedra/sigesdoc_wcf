@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2048
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WCF_SIGESDOC_SANIPES", "WCF_SIGESDOC_SANIPES\", "{92FBCC71-74A0-49E1-9FEC-7C1539A39B7D}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7.1"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_58484"
+		Debug.AspNetCompiler.PhysicalPath = "WCF_SIGESDOC_SANIPES\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_58484\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_58484"
+		Release.AspNetCompiler.PhysicalPath = "WCF_SIGESDOC_SANIPES\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_58484\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "58484"
+		SlnRelativePath = "WCF_SIGESDOC_SANIPES\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{92FBCC71-74A0-49E1-9FEC-7C1539A39B7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92FBCC71-74A0-49E1-9FEC-7C1539A39B7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {148CCE66-0D5E-4413-A99A-EFE2302410F5}
+	EndGlobalSection
+EndGlobal
