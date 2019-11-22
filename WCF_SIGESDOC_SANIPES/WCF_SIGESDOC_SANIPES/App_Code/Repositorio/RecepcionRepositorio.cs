@@ -8,9 +8,10 @@ using System.Web;
 /// </summary>
 public class RecepcionRepositorio : IRecepcionRepositorio
 {
+    
     public IEnumerable<RecepcionResponse> GetRecepcions()
     {
-        throw new NotImplementedException();
+        Entidades.BD_MESA_VIRTUALEntities _datacontext = 
     }
 
     public IEnumerable<RecepcionResponse> GuardaRecepcion(int idrecepcion)
