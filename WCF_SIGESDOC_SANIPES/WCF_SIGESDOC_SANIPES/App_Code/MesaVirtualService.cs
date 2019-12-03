@@ -12,7 +12,8 @@ public class MesaVirtualService : IMesaVirtualService
 {
     public IEnumerable<RecepcionResponse> GetRecepcions()
     {
-        throw new NotImplementedException();
+        RecepcionRepositorio recepcionRepositorio = new RecepcionRepositorio();
+        return recepcionRepositorio.GetRecepcions();
     }
 
     public IEnumerable<RecepcionResponse> GuardaRecepcion(int idrecepcion)

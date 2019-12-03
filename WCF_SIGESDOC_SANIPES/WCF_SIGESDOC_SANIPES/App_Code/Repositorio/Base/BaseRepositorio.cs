@@ -7,14 +7,15 @@ using System.Web;
 /// <summary>
 /// Descripción breve de BaseRepositorio
 /// </summary>
-public class BaseRepositorio<T>:IBaseRepositorio<T> where T: class
+public class BaseRepositorio<T> : IBaseRepositorio<T> where T : class
 {
-    public readonly IContext _context;
+    private readonly IContext _context;
 
-    public IContext Context
+    protected IContext Context
     {
-        get { return _context;  }
+        get { return _context; }
     }
+
     public BaseRepositorio(IContext context)
     {
         _context = context;

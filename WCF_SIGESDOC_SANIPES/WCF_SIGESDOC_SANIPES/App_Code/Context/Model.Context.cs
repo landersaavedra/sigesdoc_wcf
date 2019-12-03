@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Entidades
+namespace Context
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class BD_MESA_VIRTUALEntities : DbContext
     {
@@ -31,5 +33,10 @@ namespace Entidades
         public virtual DbSet<IOTDTD_DOC_PRINCIPAL> IOTDTD_DOC_PRINCIPAL { get; set; }
         public virtual DbSet<IOTDTM_DOC_EXTERNO> IOTDTM_DOC_EXTERNO { get; set; }
         public virtual DbSet<TIPO_DOCUMENTO> TIPO_DOCUMENTO { get; set; }
+    
+        public virtual int SP_CONSULTAR_RECEPCION()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_CONSULTAR_RECEPCION");
+        }
     }
 }

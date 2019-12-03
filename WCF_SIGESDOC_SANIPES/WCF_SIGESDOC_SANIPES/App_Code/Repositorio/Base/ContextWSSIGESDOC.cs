@@ -5,7 +5,7 @@ using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Web;
-
+ 
 /// <summary>
 /// Descripción breve de ContextWSSIGESDOC
 /// </summary>
@@ -15,6 +15,11 @@ public class ContextWSSIGESDOC:IContext, IDisposable, IUnitOfWork
     public ContextWSSIGESDOC(DbContext context)
     {
         _dataContext = context;
+    }
+
+    public DbContext GetContext()
+    {
+        return _dataContext;
     }
 
     public void Actualizar<T>(T entity) where T : class
@@ -84,11 +89,6 @@ public class ContextWSSIGESDOC:IContext, IDisposable, IUnitOfWork
 
         entityEntry.State = EntityState.Deleted;
         _dataContext.Set<T>().Remove(entity);
-    }
-
-    public DbContext GetContext()
-    {
-        return _dataContext;
     }
 
     public int Guardar(bool validate = true)

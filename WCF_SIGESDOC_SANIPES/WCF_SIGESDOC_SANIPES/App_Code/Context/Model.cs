@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Entidades
+namespace Context
 {
     using System;
     using System.Collections.Generic;
@@ -50,7 +50,7 @@ namespace Entidades
         public virtual ICollection<IOTDTM_DOC_EXTERNO> IOTDTM_DOC_EXTERNO { get; set; }
     }
 }
-namespace Entidades
+namespace Context
 {
     using System;
     using System.Collections.Generic;
@@ -90,7 +90,7 @@ namespace Entidades
         public virtual ICollection<IOTDTM_DOC_EXTERNO> IOTDTM_DOC_EXTERNO { get; set; }
     }
 }
-namespace Entidades
+namespace Context
 {
     using System;
     using System.Collections.Generic;
@@ -105,7 +105,7 @@ namespace Entidades
         public virtual IOTDTM_DOC_EXTERNO IOTDTM_DOC_EXTERNO { get; set; }
     }
 }
-namespace Entidades
+namespace Context
 {
     using System;
     using System.Collections.Generic;
@@ -122,7 +122,7 @@ namespace Entidades
         public virtual IOTDTM_DOC_EXTERNO IOTDTM_DOC_EXTERNO { get; set; }
     }
 }
-namespace Entidades
+namespace Context
 {
     using System;
     using System.Collections.Generic;
@@ -160,7 +160,7 @@ namespace Entidades
         public virtual ICollection<IOTDTD_DOC_PRINCIPAL> IOTDTD_DOC_PRINCIPAL { get; set; }
     }
 }
-namespace Entidades
+namespace Context
 {
     using System;
     using System.Collections.Generic;

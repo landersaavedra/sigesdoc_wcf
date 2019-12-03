@@ -158,6 +158,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="SP_CONSULTAR_RECEPCION" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="BD_MESA_VIRTUALModelStoreContainer">
           <EntitySet Name="IOTDTC_DESPACHO" EntityType="Self.IOTDTC_DESPACHO" Schema="IDOSGD" store:Type="Tables" />
           <EntitySet Name="IOTDTC_RECEPCION" EntityType="Self.IOTDTC_RECEPCION" Schema="IDOSGD" store:Type="Tables" />
@@ -370,6 +371,7 @@
             <End Role="IOTDTM_DOC_EXTERNO" EntitySet="IOTDTM_DOC_EXTERNO" />
             <End Role="IOTDTD_DOC_PRINCIPAL" EntitySet="IOTDTD_DOC_PRINCIPAL" />
           </AssociationSet>
+          <FunctionImport Name="SP_CONSULTAR_RECEPCION" />
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
@@ -488,6 +490,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="SP_CONSULTAR_RECEPCION" FunctionName="BD_MESA_VIRTUALModel.Store.SP_CONSULTAR_RECEPCION" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
